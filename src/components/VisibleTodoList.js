@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { toggleTodo } from '../actions/index';
 import TodoList from './TodoList';
+import { store } from '../index';
 
 const getVisibleTodos = (
   todos,
@@ -21,9 +22,11 @@ const getVisibleTodos = (
   }
 }
 
-const mapStateToProps = (state) => ({
-  todos: getVisibleTodos(state.todos, state.visibilityFilter),
-});
+const mapStateToProps = (state) => {
+  console.log('in VisibleTodoList -- logging state');
+  console.log(store.getState());
+  return { todos: getVisibleTodos(state.todos, state.visibilityFilter) }
+};
 
 const mapDispatchToProps = (dispatch) => ({
   onTodoClick(id) {

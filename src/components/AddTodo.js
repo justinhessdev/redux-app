@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index';
+import { increment } from '../actions/index';
 
 let AddTodo = ({ dispatch }) => {
   let input;
@@ -12,6 +13,7 @@ let AddTodo = ({ dispatch }) => {
       }} />
       <button onClick={() => {
         dispatch(addTodo(input.value));
+        dispatch(increment());
         input.value = '';
       }}>
         Add Todo

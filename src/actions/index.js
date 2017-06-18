@@ -23,3 +23,9 @@ export const addTodo = (text) => ({
   id: nextTodoId++,
   text
 });
+
+let val = 0;
+export const increment = () => ({
+  type: 'INCREMENT',
+  value: ++val,
+});

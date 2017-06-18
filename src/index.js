@@ -5,7 +5,9 @@ import Root from './components/Root';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-const store = configureStore();
+export const store = configureStore();
+console.log('App starting -- in Root index.js -- logging state');
+console.log(store.getState());
 
 render(
   <Root store={store}/>,
