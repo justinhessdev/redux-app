@@ -1,14 +1,6 @@
 import { v4 } from 'node-uuid';
 
 /*
-setVisibilityFilter action creator
-*/
-export const setVisibilityFilter = (filter) => ({
-    type: 'SET_VISIBILITY_FILTER',
-    filter
-});
-
-/*
 toggleTodo action creator
 */
 export const toggleTodo = (id) => ({
