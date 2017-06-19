@@ -1,3 +1,5 @@
+import { v4 } from 'node-uuid';
+
 /*
 setVisibilityFilter action creator
 */
@@ -17,10 +19,9 @@ export const toggleTodo = (id) => ({
 /*
 addTodo action creator
 */
-let nextTodoId = 0;
 export const addTodo = (text) => ({
   type: 'ADD_TODO',
-  id: nextTodoId++,
+  id: v4(),
   text
 });
 
